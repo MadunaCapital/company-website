@@ -1,12 +1,12 @@
 :root {
-  --paper: #F6F4EF;
-  --paper-2: #EFECE5;
-  --paper-3: #E4E0D8;
-  --card: #FBFAF7;
+  --paper: #DFDFD9;      /* the silver of the logo artwork */
+  --paper-2: #D5D5CE;
+  --paper-3: #CACAC3;
+  --card: #ECECE7;
   --ink: #262624;
   --ink-2: #4A4A46;
-  --muted: #7A7974;
-  --rule: #DCD8CF;
+  --muted: #62625D;
+  --rule: #C6C6BE;
   --blue: #2B5B84;
   --blue-soft: #EBF1F6;
   --warm: #C05A2B;
@@ -36,12 +36,9 @@ em { font-style: italic; }
 .skip:focus { left: 8px; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
 
-/* backgrounds */
-.grid-bg { background-image: linear-gradient(to right, rgba(38,38,36,0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(38,38,36,0.045) 1px, transparent 1px); background-size: 48px 48px; }
-.grid-bg-dark { background-color: var(--dark); background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px; }
 
 /* nav */
-.nav { position: sticky; top: 0; z-index: 50; background: rgba(246,244,239,0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
+.nav { position: sticky; top: 0; z-index: 50; background: rgba(223,223,217,0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .3s, box-shadow .3s; }
 .nav.scrolled { border-bottom-color: var(--rule); box-shadow: 0 6px 24px -18px rgba(0,0,0,0.25); }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
 .brand img { width: 92px; height: auto; }
@@ -62,7 +59,7 @@ em { font-style: italic; }
 .pill-blue { background: var(--blue); color: #fff; }
 .pill-blue .pill-arrow { background: #fff; color: var(--blue); }
 .pill-blue:hover { background: #224a6c; }
-.pill-ghost { color: var(--ink); border: 1px solid #B9B4A9; padding-left: 22px; }
+.pill-ghost { color: var(--ink); border: 1px solid #A9A9A1; padding-left: 22px; }
 .pill-ghost .pill-arrow { background: var(--paper-3); }
 .pill-ghost:hover { background: var(--paper-2); }
 .pill-light { background: var(--paper); color: var(--dark); }
@@ -83,8 +80,7 @@ em { font-style: italic; }
 .hero { padding: 40px 0 88px; border-bottom: 1px solid var(--rule); }
 .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
 /* The video's paper is rendered in the page colour (tools/blend_video.py), so
-   it needs no frame: a soft radial mask lets the page grid fade back in around
-   the logo instead of stopping at a hard rectangle. */
+   it needs no frame; a soft radial mask hides any last trace of an edge. */
 .reveal-card { margin: -24px auto -36px; max-width: 980px; aspect-ratio: 16 / 9; background: transparent;
   -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 100%);
           mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 100%); }
@@ -124,11 +120,11 @@ em { font-style: italic; }
 .rows { border-top: 1px solid var(--rule); }
 .row { display: grid; grid-template-columns: 80px 220px 1fr 48px; gap: 24px; align-items: center; padding: 30px 0; border-bottom: 1px solid var(--rule); transition: background .3s, padding .3s; }
 .row:hover { background: rgba(255,255,255,0.45); padding-left: 12px; padding-right: 12px; }
-.row-num { font-family: var(--mono); font-size: 14px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1px solid #B9B4A9; color: var(--ink-2); transition: background .3s, color .3s; }
+.row-num { font-family: var(--mono); font-size: 14px; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; border: 1px solid #A9A9A1; color: var(--ink-2); transition: background .3s, color .3s; }
 .row:hover .row-num { background: var(--dark); color: var(--paper); border-color: var(--dark); }
 .row h3 { font-family: var(--serif); font-size: 30px; }
 .row p { color: var(--ink-2); }
-.row-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #B9B4A9; display: grid; place-items: center; transition: transform .4s var(--ease), background .3s; }
+.row-arrow { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #A9A9A1; display: grid; place-items: center; transition: transform .4s var(--ease), background .3s; }
 .row-arrow svg { width: 14px; height: 14px; fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; }
 .row:hover .row-arrow { transform: rotate(45deg); background: var(--card); }
 
@@ -146,7 +142,7 @@ em { font-style: italic; }
 .markets { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 .timeline { list-style: none; margin: 0; padding: 0 0 0 30px; border-left: 2px solid var(--rule); display: flex; flex-direction: column; gap: 34px; }
 .timeline li { position: relative; }
-.t-dot { position: absolute; left: -40px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: var(--blue); border: 3px solid var(--paper); }
+.t-dot { position: absolute; left: -40px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: var(--blue); border: 3px solid var(--paper-2); }
 .t-dot-dark { background: var(--dark); }
 .t-when { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
 .timeline h3 { font-family: var(--serif); font-size: 24px; margin: 2px 0 6px; }
@@ -175,7 +171,7 @@ em { font-style: italic; }
 .mail:hover { color: var(--blue); }
 
 /* closing CTA */
-.cta { position: relative; border-radius: 22px; padding: 72px 64px; color: var(--dark-text); text-align: left; }
+.cta { position: relative; background: var(--dark); border-radius: 22px; padding: 72px 64px; color: var(--dark-text); text-align: left; }
 .cta .corner { opacity: 1; width: 9px; height: 9px; }
 .cta .corner.tl { left: 18px; top: 18px; }
 .cta .corner.br { right: 18px; bottom: 18px; }

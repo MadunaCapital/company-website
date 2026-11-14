@@ -1,4 +1,4 @@
-"""Re-renders the logo-reveal video so its background IS the page colour.
+"""Re-renders the logo-reveal video so its background IS the page colour (#DFDFD9).
 
 The source is dark ink on grey paper with a vignette. The first frame is blank
 paper, so it serves as a lighting reference: each frame is divided by a blurred
@@ -14,10 +14,10 @@ import sys
 import cv2
 import numpy as np
 
-PAGE_BGR = np.array([239, 244, 246], np.float32)  # #F6F4EF
+PAGE_BGR = np.array([217, 223, 223], np.float32)  # #DFDFD9, the silver of the logo artwork
 # H.264 (BT.709, limited range) decodes this shade ~3 levels darker, so the
 # paper is encoded slightly lighter to land exactly on the page colour.
-ENCODE_OFFSET = np.array([3, 2, 2], np.float32)
+ENCODE_OFFSET = np.array([2, 0, 0], np.float32)  # tuned against Chrome's rendered output
 W, H, FPS = 1280, 720, 30
 
 
