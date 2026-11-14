@@ -1,27 +1,31 @@
-// Small, dependency-free interactions: logo reveal video, scroll reveals,
+// Small, dependency-free interactions: the looping logo video, scroll reveals,
 // rolling counters and the nav shadow.
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Logo reveal: plays once, stops on the finished logo, offers a replay.
-  var card = document.querySelector(".reveal-card");
+  // Logo animation: loops continuously; with reduced motion it stays on the
+  // finished logo (the poster).
   var video = document.getElementById("heroVideo");
-  var replay = document.getElementById("replayBtn");
-  if (video && card) {
-    var markDone = function () { card.classList.add("done"); };
-    video.addEventListener("ended", markDone);
+  if (video) {
     if (reduce) {
-      markDone(); // the poster is the finished logo
+      video.removeAttribute("loop");
     } else {
       var p = video.play();
-      if (p && p.catch) p.catch(markDone);
+      if (p && p.catch) p.catch(function () {});
+      // Dissolve the finished logo over the last moments of each loop, so it
+      // fades back to blank paper instead of vanishing in one frame.
+      var FADE = 0.7;
+      var tick = function () {
+        var d = video.duration;
+        if (d) {
+          var left = d - video.currentTime;
+          video.style.opacity = left < FADE ? Math.max(0, left / FADE).toFixed(3) : "1";
+        }
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
     }
-    replay.addEventListener("click", function () {
-      card.classList.remove("done");
-      video.currentTime = 0;
-      video.play();
-    });
   }
 
   // Nav border once the page scrolls.

@@ -82,11 +82,13 @@ em { font-style: italic; }
 /* hero */
 .hero { padding: 40px 0 88px; border-bottom: 1px solid var(--rule); }
 .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-.reveal-card { position: relative; margin: 0 auto; max-width: 880px; aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden; background: var(--video-bg); border: 1px solid #D5D1C7; box-shadow: 0 1px 3px rgba(38,38,36,.05), 0 24px 48px -20px rgba(38,38,36,.25); }
+/* The video's paper is rendered in the page colour (tools/blend_video.py), so
+   it needs no frame: a soft radial mask lets the page grid fade back in around
+   the logo instead of stopping at a hard rectangle. */
+.reveal-card { margin: -24px auto -36px; max-width: 980px; aspect-ratio: 16 / 9; background: transparent;
+  -webkit-mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 100%);
+          mask-image: radial-gradient(ellipse 72% 72% at 50% 50%, #000 52%, transparent 100%); }
 .reveal-video { width: 100%; height: 100%; object-fit: cover; }
-.replay { position: absolute; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 6px; font: 500 12px var(--mono); color: var(--ink-2); background: rgba(246,244,239,0.85); border: 1px solid #C9C4B9; border-radius: 999px; padding: 6px 12px; cursor: pointer; opacity: 0; transition: opacity .4s; }
-.replay svg { width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
-.reveal-card.done .replay, .replay:focus-visible { opacity: 1; }
 .hero-copy { max-width: 900px; margin: 48px auto 0; text-align: center; }
 .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.6vw, 56px); line-height: 1.12; letter-spacing: -0.01em; }
 .hero h1 em { color: var(--blue); font-weight: 300; }
@@ -214,7 +216,7 @@ em { font-style: italic; }
   body { font-size: 16px; }
   .section { padding: 76px 0; }
   .hero { padding-top: 28px; }
-  .reveal-card { border-radius: 14px; }
+  .reveal-card { margin: -8px auto -16px; }
   .stats, .team { grid-template-columns: 1fr; }
   .row { grid-template-columns: 48px 1fr; padding: 24px 0; }
   .row-arrow { display: none; }
