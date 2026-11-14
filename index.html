@@ -3,148 +3,258 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Maduna Capital Technologies — Real-time market intelligence</title>
-<meta name="description" content="Maduna Capital Technologies builds software that watches markets in real time, models how prices move and finds the moments when they disagree. Johannesburg, South Africa.">
+<title>Maduna Capital Technologies — Quantitative market intelligence</title>
+<meta name="description" content="Maduna Capital Technologies builds software that watches markets in real time, models how long pricing opportunities last, and measures how much of them can be captured. Johannesburg, South Africa.">
+<meta name="theme-color" content="#F6F4EF">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Maduna Capital Technologies">
-<meta property="og:description" content="Real-time market intelligence, built in Johannesburg.">
-<meta property="og:image" content="https://madunacapitaltechnologies.com/assets/logo.png">
+<meta property="og:description" content="Quantitative market intelligence, built in Johannesburg.">
+<meta property="og:image" content="https://madunacapitaltechnologies.com/assets/logo-reveal-poster.jpg">
 <meta property="og:url" content="https://madunacapitaltechnologies.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300;400;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script defer src="main.js"></script>
 </head>
 <body>
 
-<header class="nav">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="brand" aria-label="Maduna Capital Technologies, home"><img src="assets/logo-small.png" alt="Maduna Capital Technologies" width="150" height="99"></a>
-    <nav aria-label="Main">
+    <nav aria-label="Main" class="nav-links">
       <a href="#approach">Approach</a>
+      <a href="#how">How it works</a>
       <a href="#research">Research</a>
       <a href="#team">Team</a>
-      <a href="#contact" class="nav-cta">Contact</a>
     </nav>
+    <a href="#contact" class="pill pill-dark nav-cta"><span>Contact</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-<section class="hero">
-  <div class="wrap hero-inner">
-    <img class="hero-logo" src="assets/logo.png" alt="Maduna Capital Technologies logo" width="1100" height="727">
-    <div class="rule"></div>
-    <h1>Real-time market intelligence</h1>
-    <p class="lead">We build software that watches markets continuously, models how prices move and finds the moments when they disagree — then measures exactly how much of that disagreement can be captured.</p>
-    <div class="hero-actions">
-      <a class="btn" href="#contact">Get in touch</a>
-      <a class="btn btn-ghost" href="#approach">How it works</a>
+<!-- HERO -->
+<section class="hero grid-bg" id="top">
+  <div class="wrap">
+    <div class="hero-badges reveal">
+      <span class="chip chip-live"><span class="dot" aria-hidden="true"></span>Quantitative market intelligence · Est. 2026</span>
+      <span class="chip chip-quiet">Johannesburg, South Africa</span>
+    </div>
+
+    <figure class="reveal-card reveal">
+      <video id="heroVideo" class="reveal-video" muted playsinline preload="auto" poster="assets/logo-reveal-poster.jpg" aria-label="The Maduna Capital Technologies logo being drawn">
+        <source src="assets/logo-reveal.mp4" type="video/mp4">
+      </video>
+      <button class="replay" id="replayBtn" type="button" aria-label="Replay the logo animation">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 1 0 1.8-4.1M2.5 2.5v3h3"/></svg>Replay
+      </button>
+    </figure>
+
+    <div class="hero-copy">
+      <h1 class="reveal">We find the moments when markets disagree — and measure <em>exactly</em> how much of that disagreement can be captured.</h1>
+      <p class="lead reveal">A real-time engine that watches thousands of live prices at once, models how long each opportunity will last, and turns what it finds into ranked, sized signals.</p>
+      <div class="hero-actions reveal">
+        <a class="pill pill-blue" href="#contact"><span>Get in touch</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="pill pill-ghost" href="#how"><span>How it works</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12L12 4M6 4h6v6"/></svg></span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="approach" class="section">
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Real-time data</span><i>✦</i><span>Survival analysis</span><i>✦</i><span>Event markets</span><i>✦</i><span>Prediction markets</span><i>✦</i><span>Capital-aware sizing</span><i>✦</i><span>Microsoft Azure · South Africa</span><i>✦</i>
+    <span>Real-time data</span><i>✦</i><span>Survival analysis</span><i>✦</i><span>Event markets</span><i>✦</i><span>Prediction markets</span><i>✦</i><span>Capital-aware sizing</span><i>✦</i><span>Microsoft Azure · South Africa</span><i>✦</i>
+  </div>
+</div>
+
+<!-- STATEMENT + BIG STAT -->
+<section class="section statement">
+  <div class="wrap statement-grid">
+    <div class="reveal">
+      <p class="eyebrow">01 · The thesis</p>
+      <h2>Prices across fragmented markets drift apart for seconds at a time. Finding the gap is easy. Knowing whether it will <em>last</em> is the edge.</h2>
+    </div>
+    <div class="bigstat reveal">
+      <span class="bigstat-num"><span class="count" data-to="46.7" data-dec="1">0</span>M</span>
+      <span class="bigstat-label">price updates analysed in our first 17-day live test — without a single restart</span>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH: numbered rows -->
+<section class="section section-alt" id="approach">
   <div class="wrap">
-    <p class="eyebrow">Our approach</p>
-    <h2>Watch everything. Model the timing. Act on what lasts.</h2>
-    <div class="cards">
-      <article class="card">
-        <span class="num">01</span>
+    <div class="sec-head reveal">
+      <p class="eyebrow">02 · Our approach</p>
+      <h2>Watch everything. Model the timing. Act on what lasts.</h2>
+    </div>
+    <div class="rows">
+      <article class="row reveal">
+        <span class="row-num">01</span>
         <h3>Watch</h3>
-        <p>A cloud platform reads thousands of live prices across markets, in sync, every few seconds — far beyond what any person can follow.</p>
+        <p>A cloud platform reads thousands of live prices across markets in sync, so every comparison is made between prices taken at the same moment.</p>
+        <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12L12 4M6 4h6v6"/></svg></span>
       </article>
-      <article class="card">
-        <span class="num">02</span>
+      <article class="row reveal">
+        <span class="row-num">02</span>
         <h3>Model</h3>
-        <p>Statistical models predict how long each opportunity will last, from its size, timing, market and conditions — and how risky it is to act on.</p>
+        <p>Survival models, trained on our own recorded data, predict how long each opportunity will last and how risky it is to act on.</p>
+        <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12L12 4M6 4h6v6"/></svg></span>
       </article>
-      <article class="card">
-        <span class="num">03</span>
+      <article class="row reveal">
+        <span class="row-num">03</span>
         <h3>Act</h3>
         <p>Every signal is confirmed, ranked and sized to the capital available, so effort goes only to the opportunities most likely to still be there.</p>
+        <span class="row-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12L12 4M6 4h6v6"/></svg></span>
       </article>
     </div>
   </div>
 </section>
 
-<section class="section section-alt" aria-labelledby="how-title">
+<!-- HOW IT WORKS: interactive pipeline + sample signal -->
+<section class="section" id="how">
   <div class="wrap">
-    <p class="eyebrow">How it works</p>
-    <h2 id="how-title">From a price change to a ranked signal</h2>
-    <ol class="pipeline">
-      <li><span class="step">1</span><h3>Read</h3><p>Live prices from many sources, read in sync</p></li>
-      <li><span class="step">2</span><h3>Match</h3><p>The same event recognised everywhere it trades</p></li>
-      <li><span class="step">3</span><h3>Detect</h3><p>Price disagreements found in microseconds</p></li>
-      <li class="hl"><span class="step">4</span><h3>Predict</h3><p>Expected lifetime and risk for each one</p></li>
-      <li class="dark"><span class="step">5</span><h3>Signal</h3><p>Confirmed, ranked and sized</p></li>
-    </ol>
-    <p class="note">Built as twelve independent cloud services on Microsoft Azure in South Africa, covered by hundreds of automated tests. Every price is recorded, so every model can be tested against history before it touches capital.</p>
+    <div class="sec-head reveal">
+      <p class="eyebrow">03 · How it works</p>
+      <h2>From a price change to a ranked signal, in five stages.</h2>
+      <p class="sec-sub">Select a stage to see what it does.</p>
+    </div>
+
+    <div class="pipe reveal" role="tablist" aria-label="Pipeline stages">
+      <button class="pipe-node" role="tab" aria-selected="true" aria-controls="pipePanel" data-stage="0"><span>01</span>Read</button>
+      <button class="pipe-node" role="tab" aria-selected="false" aria-controls="pipePanel" data-stage="1"><span>02</span>Match</button>
+      <button class="pipe-node" role="tab" aria-selected="false" aria-controls="pipePanel" data-stage="2"><span>03</span>Detect</button>
+      <button class="pipe-node" role="tab" aria-selected="false" aria-controls="pipePanel" data-stage="3"><span>04</span>Predict</button>
+      <button class="pipe-node" role="tab" aria-selected="false" aria-controls="pipePanel" data-stage="4"><span>05</span>Signal</button>
+    </div>
+
+    <div class="pipe-grid">
+      <div class="pipe-panel reveal" id="pipePanel" role="tabpanel" aria-live="polite">
+        <p class="mono pipe-meta" id="pipeMeta">Stage 01 / 05 · Synchronised</p>
+        <h3 id="pipeTitle">Read every market at the same moment</h3>
+        <p id="pipeDesc">Independent services read live public prices from every source on a shared clock, so two prices are never compared when one is already out of date.</p>
+        <div class="tags" id="pipeTags"><span>Shared clock</span><span>Public data only</span><span>Cloud-native</span></div>
+      </div>
+
+      <div class="code reveal" aria-label="An illustrative example of one signal">
+        <div class="code-head"><span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">signal.json — illustrative</span></div>
+<pre class="mono"><code>{
+  <b>"event"</b>: "Team A vs Team B",
+  <b>"market"</b>: "match winner",
+  <b>"edge_pct"</b>: <em>1.6</em>,
+  <b>"confirmed"</b>: <em>true</em>,
+  <b>"expected_life_s"</b>: <em>184</em>,
+  <b>"p_survives_placement"</b>: <em>0.78</em>,
+  <b>"priority"</b>: <em>1</em>,
+  <b>"allocation"</b>: { <b>"total"</b>: <em>2000</em>, <b>"legs"</b>: <em>3</em> }
+}</code></pre>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="research" class="section section-dark">
+<!-- RESEARCH: dark stat band + capability tiles -->
+<section class="section section-dark" id="research">
   <div class="wrap">
-    <p class="eyebrow eyebrow-warm">Research</p>
-    <h2>Our first live test, in numbers</h2>
+    <div class="sec-head reveal">
+      <p class="eyebrow eyebrow-warm">04 · Research</p>
+      <h2>Our first live test, in numbers.</h2>
+    </div>
     <div class="stats">
-      <div class="stat"><span class="big">46.7M</span><span>price updates analysed in 17 days</span></div>
-      <div class="stat"><span class="big">8,400+</span><span>pricing opportunities recorded</span></div>
-      <div class="stat"><span class="big">79%</span><span>accuracy predicting which opportunities last longer</span></div>
-      <div class="stat"><span class="big">0</span><span>restarts across the whole test</span></div>
+      <div class="stat reveal"><span class="stat-num"><span class="count" data-to="46.7" data-dec="1">0</span>M</span><span>price updates analysed in 17 days</span></div>
+      <div class="stat reveal"><span class="stat-num"><span class="count" data-to="8400" data-sep="1">0</span>+</span><span>pricing opportunities recorded and studied</span></div>
+      <div class="stat reveal"><span class="stat-num"><span class="count" data-to="79">0</span>%</span><span>accuracy ranking which opportunities last longer</span></div>
+      <div class="stat reveal"><span class="stat-num"><span class="count" data-to="3">0</span>×</span><span>more market coverage since the first test</span></div>
     </div>
-    <p class="note note-dark">We are now in our research phase: measuring, with real capital and full market coverage, how much of what the models see can be captured.</p>
+
+    <div class="tiles">
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Lifetime modelling</h3><p>How long an opportunity is likely to stay open.</p></div>
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Risk scoring</h3><p>The chance it closes before anyone can act.</p></div>
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Live confirmation</h3><p>Every new signal is re-checked at once before it counts.</p></div>
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Capital-aware sizing</h3><p>Allocations that respect the money actually available.</p></div>
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Full price history</h3><p>Every update recorded, so every idea can be backtested.</p></div>
+      <div class="tile reveal"><span class="corner tl"></span><span class="corner br"></span><h3>Built to measure</h3><p>Simulations are replaced by measured results, step by step.</p></div>
+    </div>
+
+    <p class="note reveal">We are now in our research phase: measuring, with real capital and full market coverage, how much of what the models see can be captured.</p>
   </div>
 </section>
 
-<section class="section" aria-labelledby="markets-title">
+<!-- MARKETS -->
+<section class="section">
   <div class="wrap markets">
-    <div>
-      <p class="eyebrow">Where we operate</p>
-      <h2 id="markets-title">Starting in event markets. Building toward financial markets.</h2>
+    <div class="reveal">
+      <p class="eyebrow">05 · Where we operate</p>
+      <h2>Starting in event markets. Building toward financial markets.</h2>
     </div>
-    <div class="timeline">
-      <div class="t-item"><span class="t-dot"></span><div><h3>Today</h3><p>Sports and prediction markets: fast, fragmented and publicly priced — the ideal place to build and prove the engine.</p></div></div>
-      <div class="t-item"><span class="t-dot"></span><div><h3>Next</h3><p>Data and signals: the confirmed-opportunity feed and the price history we collect, for traders and researchers.</p></div></div>
-      <div class="t-item"><span class="t-dot t-dot-dark"></span><div><h3>Later</h3><p>The same detect–model–act engine applied to listed financial markets.</p></div></div>
+    <ol class="timeline">
+      <li class="reveal"><span class="t-dot"></span><p class="mono t-when">Today</p><h3>Event and prediction markets</h3><p>Fast, fragmented and publicly priced — the ideal place to build and prove the engine.</p></li>
+      <li class="reveal"><span class="t-dot"></span><p class="mono t-when">Next</p><h3>Data and signals</h3><p>The confirmed-opportunity feed and our growing price history, for traders and researchers.</p></li>
+      <li class="reveal"><span class="t-dot t-dot-dark"></span><p class="mono t-when">Later</p><h3>Financial markets</h3><p>The same detect, model and act engine applied to listed markets.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="section section-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">06 · How we work</p>
+      <h2>Principles we don’t trade away.</h2>
+    </div>
+    <div class="principles">
+      <div class="principle reveal"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><h3>Public data only</h3><p>We read only information that is openly published. No logins, no workarounds.</p></div>
+      <div class="principle reveal"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"/></svg></span><h3>People decide</h3><p>The system finds, checks and ranks. Decisions to commit capital are made by people.</p></div>
+      <div class="principle reveal"><span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><h3>Measured before scaled</h3><p>Nothing grows on a simulation alone. Every stage has to prove itself with real results.</p></div>
     </div>
   </div>
 </section>
 
-<section id="team" class="section section-alt">
+<!-- TEAM -->
+<section class="section" id="team">
   <div class="wrap">
-    <p class="eyebrow">Team</p>
-    <h2>Meet the founders</h2>
+    <div class="sec-head reveal">
+      <p class="eyebrow">07 · Leadership</p>
+      <h2>Meet the founders.</h2>
+    </div>
     <div class="team">
-      <article class="person">
-        <img src="assets/sibonelo.jpg" alt="Sibonelo Maduna" width="640" height="795">
-        <div>
-          <h3>Sibonelo Maduna</h3>
-          <p class="role">CEO · Co-founder</p>
-          <p>BSc Computer Science and Applied Mathematics at the University of the Witwatersrand. Designed and built the platform: the real-time data services, the matching engine and the models behind it.</p>
-        </div>
+      <article class="person reveal">
+        <div class="photo"><img src="assets/sibonelo.jpg" alt="Sibonelo Maduna" width="800" height="890"><span class="photo-tag mono">CEO · Co-founder</span></div>
+        <h3>Sibonelo Maduna</h3>
+        <p class="mono person-sub">BSc Computer Science &amp; Applied Mathematics · Wits</p>
+        <p>Designed and built the platform end to end: the real-time data services, the matching engine and the models behind it. Leads technology and research.</p>
+        <a class="mail" href="mailto:sibonelo@madunacapitaltechnologies.com">sibonelo@madunacapitaltechnologies.com</a>
       </article>
-      <article class="person">
-        <img src="assets/yakha.jpg" alt="Yakha Maninjwa" width="640" height="795">
-        <div>
-          <h3>Yakha Maninjwa</h3>
-          <p class="role">COO · Co-founder</p>
-          <p>Final-year BSc in Economic Science, Mathematics and Mathematical Statistics. Runs the company day to day and leads investor communication and strategy. Runs charity work through the Doppler and Yakha Ubuntu Foundation and the Mercy Foundation at JICC.</p>
-        </div>
+      <article class="person reveal">
+        <div class="photo"><img src="assets/yakha.jpg" alt="Yakha Maninjwa" width="800" height="890"><span class="photo-tag mono">COO · Co-founder</span></div>
+        <h3>Yakha Maninjwa</h3>
+        <p class="mono person-sub">BSc Economic Science, Mathematics &amp; Mathematical Statistics</p>
+        <p>Runs the company day to day and leads investor communication and strategy. Runs charity work through the Doppler and Yakha Ubuntu Foundation and the Mercy Foundation at JICC.</p>
+        <a class="mail" href="mailto:yakha@madunacapitaltechnologies.com">yakha@madunacapitaltechnologies.com</a>
       </article>
     </div>
   </div>
 </section>
 
-<section id="contact" class="section contact">
+<!-- CLOSING CTA -->
+<section class="section" id="contact">
   <div class="wrap">
-    <p class="eyebrow">Contact</p>
-    <h2>Let’s talk</h2>
-    <p class="lead">We’re open to conversations with investors, partners and researchers interested in quantitative finance and market data.</p>
-    <div class="contacts">
-      <a class="contact-card" href="mailto:sibonelo@madunacapitaltechnologies.com"><span class="c-name">Sibonelo Maduna</span><span class="c-role">CEO</span><span class="c-mail">sibonelo@madunacapitaltechnologies.com</span></a>
-      <a class="contact-card" href="mailto:yakha@madunacapitaltechnologies.com"><span class="c-name">Yakha Maninjwa</span><span class="c-role">COO</span><span class="c-mail">yakha@madunacapitaltechnologies.com</span></a>
+    <div class="cta grid-bg-dark reveal">
+      <span class="corner tl"></span><span class="corner br"></span>
+      <p class="eyebrow eyebrow-warm">Contact</p>
+      <h2>Let’s talk.</h2>
+      <p>We’re open to conversations with investors, partners and researchers interested in quantitative finance and market data.</p>
+      <div class="cta-actions">
+        <a class="pill pill-light" href="mailto:sibonelo@madunacapitaltechnologies.com"><span>Email Sibonelo · CEO</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+        <a class="pill pill-outline-light" href="mailto:yakha@madunacapitaltechnologies.com"><span>Email Yakha · COO</span><span class="pill-arrow" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -153,8 +263,8 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <img src="assets/logo-small.png" alt="" width="120" height="79">
-    <p>© 2026 Maduna Capital Technologies · Johannesburg, South Africa</p>
+    <img src="assets/logo-small.png" alt="" width="150" height="99">
+    <p>© <span id="year">2026</span> Maduna Capital Technologies · Johannesburg, South Africa</p>
   </div>
 </footer>
 
