@@ -33,7 +33,7 @@ def main(src, out_mp4, out_poster):
     enc = subprocess.Popen([
         "ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
         "-vf", "scale=out_color_matrix=bt709:out_range=tv,format=yuv420p",
-        "-c:v", "libx264", "-preset", "slow", "-crf", "22", "-tune", "animation",
+        "-c:v", "libx264", "-preset", "slow", "-crf", "12", "-tune", "animation",
         "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv",
         "-movflags", "+faststart", "-an", out_mp4,
     ], stdin=subprocess.PIPE)
